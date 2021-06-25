@@ -14,7 +14,13 @@ NOT_PALINDROMES = [
 
 
 def is_palindrome(palindrome):
-    # Start coding here
+    delete_spaces = [x for x in palindrome.lower() if x != " "]
+
+    for i in range(len(delete_spaces)):
+        if delete_spaces[i] != delete_spaces[-(i+1)]:
+            return False
+    return True
+    
     pass
 
 def validate():
