@@ -15,7 +15,7 @@ NOT_PALINDROMES = [
 
 def is_palindrome(palindrome):
     # Start coding here
-    x = [i for i in palindrome.lower() if i != " "]
+    x = [i for i in palindrome.lower() if i != " "] # List comprehension
 
     for _ in range(len(x)):
         if x[_] != x[-(_+1)]:
