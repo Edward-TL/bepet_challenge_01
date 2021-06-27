@@ -1,0 +1,96 @@
+PALINDROMES1 = ['Acaso hubo buhos aca','A la catalana banal atacala','Amar da drama']
+NOT_PALINDROMES1 = ['Hola como estas','Platzi','Oscar']
+
+v=[]
+s=bool
+
+def is_palindrome(palindrome):
+    n=0
+    n1=0
+    for y in range(len(f)):
+        if nv1[y]==f[y]:
+            n+=1
+
+    for y in range(len(g)):
+        # print(t[y],g[y])
+        if nv2[y]==g[y]:
+            n1+=1
+            
+    if n==len(f) or n1==len(g):
+        return True
+    else:
+        return False
+
+def minuscu(PALINDROMES1,NOT_PALINDROMES1):
+    c=[]
+    m=[]
+
+    for i in range(len(PALINDROMES1)):
+        v=(PALINDROMES1[i]).lower()
+        c.append(v)
+    for i in range(len(NOT_PALINDROMES1)):
+        n=NOT_PALINDROMES1[i].lower()
+        m.append(n)
+    return (c,m)
+
+def invert(i,j):
+    b=[]
+    d=[]
+    for p in range(len(i)):
+            a="".join(reversed(i[p]))
+            b.append(a)
+    for u in range(len(j)):
+            x="".join(reversed(j[u]))
+            d.append(x)
+    return (b,d)
+
+def Removespace(k,l):
+    p=[]
+    q=[]
+    n=0
+    n1=0
+    
+    while n<len(k):
+        for m in k[n]:
+            if m!=" ":
+                q.append(m)
+        n+=1
+
+    while n1<len(l):
+        for u in l[n1]:
+            if u!=" ":
+                p.append(u)
+        n1+=1
+
+    return (q,p)
+
+(i,j)=(minuscu(PALINDROMES1,NOT_PALINDROMES1))
+(r,t)=(i,j)
+(nv1,nv2)=(Removespace(r,t))
+(k,l)=(invert(i,j))
+(f,g)=(Removespace(k,l))
+print(is_palindrome(s))
+
+PALINDROMES = nv1
+NOT_PALINDROMES = nv2
+
+def validate():
+    for palindrome in PALINDROMES:
+        if not is_palindrome(palindrome):
+            return False
+
+    for not_palindrome in NOT_PALINDROMES:
+        if is_palindrome(not_palindrome):
+            return False
+    return True
+
+
+def run():
+    if validate():
+        print('Completaste el test')
+    else:
+        print('No completaste el test')
+
+
+if __name__ == '__main__':
+    run()
