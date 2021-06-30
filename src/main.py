@@ -15,7 +15,14 @@ NOT_PALINDROMES = [
 
 def is_palindrome(palindrome):
     # Start coding here
-    pass
+    palindrome = str(palindrome).casefold().replace(' ', '')
+    return palindrome == palindrome[::-1]
+
+for palindrome in  PALINDROMES:
+  resultado =  is_palindrome(palindrome)
+  print(resultado)
+
+pass
 
 def validate():
     for palindrome in PALINDROMES:
